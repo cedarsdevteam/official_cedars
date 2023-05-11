@@ -1,0 +1,51 @@
+form{
+    padding: 1rem 0;
+    padding-bottom: 4rem;
+    margin-bottom: 1rem;
+}
+
+.GetInvolved .header h1::first-letter,
+.GetInvolved .header h5::first-letter{
+    text-transform: uppercase;
+}
+
+.GetInvolved form {
+    width: 100%;
+}
+
+.GetInvolved .form-control, .form-select {
+    padding: 1.5rem 1rem;
+    background: #E7E7E7;
+    border-radius: 6px;
+    border: 1px solid #E7E7E7;
+    margin-bottom: 20px;
+    color: #999999;
+}
+
+.GetInvolved .form-select{
+    margin: 0;
+}
+
+.GetInvolved .input-group{
+    margin-bottom: 5rem;
+}
+
+.GetInvolved .input-group-text{
+    background: #E7E7E7;
+    padding: 1.5rem 1rem;
+}
+
+
+.GetInvolved .form-control:focus{
+    color: #212529;
+}
+
+.GetInvolved .get-involved-btn{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 124.02%;
+    background:  #114a55;
+    width: 70%;
+    padding: 1rem 2rem;
+    color: var(--primary-text-color);
+}

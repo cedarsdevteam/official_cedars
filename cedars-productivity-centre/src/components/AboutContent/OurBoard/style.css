@@ -1,0 +1,50 @@
+#our-board{
+    padding: 2rem 0;
+}
+
+#our-board .row{
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+#our-board .board-box{
+    text-align: center!important;
+}
+
+#our-board .board-box .board-member-img{
+    height: 370px;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: contain!important;
+}
+
+#our-board .board-box:first-child .board-member-img{
+    background: url(../../../images/our-board-content/board-member-1.svg);
+    
+}
+
+#our-board .board-box:nth-child(2) .board-member-img{
+    background: url(../../../images/our-board-content/board-member-2.svg);
+}
+
+#our-board .board-box:nth-child(3) .board-member-img{
+    background: url(../../../images/our-board-content/board-member-3.svg);
+}
+
+#our-board .board-box:nth-child(4) .board-member-img{
+    background: url(../../../images/our-board-content/board-member-4.svg);
+}
+
+#our-board .board-box h3{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+#our-board .board-box small{
+    color: #333333;
+}
+
+#our-board .board-box img{
+    margin-top: 12px;
+    margin-left: 3px;
+}

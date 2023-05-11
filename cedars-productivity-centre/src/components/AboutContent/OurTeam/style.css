@@ -1,0 +1,112 @@
+#our-team{
+    padding: 2rem 0;
+}
+
+#our-team .swiper{
+    padding-top: 3.4rem;
+}
+
+@media(min-width: 1200px) {
+    #our-team .swiper{
+        padding-top: 5rem;
+    }
+}
+
+#our-team .swiper-button-prev {
+    top: 30px;
+    left: 90%;
+    right: 10px;
+}
+
+@media(max-width: 1200px) {
+    #our-team .swiper-button-prev {
+        left: calc(88% - 20px);
+    }
+}
+
+@media(max-width: 745px) {
+    #our-team .swiper-button-prev {
+        left: calc(85% - 25px);
+    }
+}
+
+@media(max-width: 567px) {
+    #our-team .swiper-button-prev {
+        left: calc(80% - 25px);
+    }
+}
+
+#our-team .swiper-button-next{
+    top: 30px;
+    right: 10px;
+    left: auto;
+}
+
+#our-team .row{
+    justify-content: center;
+    row-gap: 3rem;
+}
+
+#our-team .team-box{
+    text-align: center!important;
+}
+
+#our-team .team-box .team-member-img{
+    height: 370px;
+    background-repeat: no-repeat!important;
+    background-position: center bottom!important;
+    background-size: contain!important;
+}
+
+@media(max-width: 1199px){
+    #our-team .team-box .team-member-img{
+        height: 259px;
+    }
+
+}
+
+#our-team .team-box .team-member-img.one{
+    background: url(../../../images/team-content/Sir-T.svg);
+}
+
+#our-team .team-box .team-member-img.two{
+    background: url(../../../images/team-content/Blessed.svg);
+}
+
+#our-team .team-box .team-member-img.three{
+    background: url(../../../images/team-content/Harry.svg);
+}
+
+#our-team .team-box .team-member-img.four{
+    background: url(../../../images/team-content/Nwadike.svg);
+}
+
+#our-team .team-box .team-member-img.five{
+    background: url(../../../images/team-content/Dienye.svg);
+}
+
+#our-team .team-box .team-member-img.six{
+    background: url(../../../images/team-content/Dienye.svg);
+}
+
+#our-team .team-box .team-member-img.seven{
+    background: url(../../../images/team-content/Jules.svg);
+}
+
+#our-team .team-box h3{
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+#our-team .team-box small{
+    color: #333333;
+}
+
+#our-team .team-box .socials{
+    justify-content: center;
+    margin-top: 12px;
+}
+
+#our-team .team-box img{
+    padding: 0 5px;
+}
