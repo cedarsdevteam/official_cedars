@@ -1,0 +1,118 @@
+#nav {
+    position: relative!important;
+}
+
+nav {
+    z-index: 7777;
+    width: 100%;
+}
+
+@media(min-width: 991px){
+    nav{
+        position: absolute!important;
+    }
+}
+
+nav ul li {
+    font-size: 16px;
+    font-weight: 450;
+    cursor: pointer;
+}
+
+.nav-mobile-row {
+    position: relative;
+}
+
+@media(max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 64px;
+        left: -100%;
+        width: 100%;
+        transition: all 1.2s ease;
+        display: block;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        background: var(--primary-text-color);
+        display: flex;
+        box-shadow: 0px 5px 10px rgba(156, 156, 156, 0.25);
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto !important;
+        left: -100%;
+        margin-left: 1px;
+        transition: all 0.2s ease;
+        opacity: 0.9;
+    }
+
+    .navbar-collapse.show {
+        margin-left: 100%;
+        transition: all 0.2s ease;
+        opacity: 1;
+    }
+}
+
+@media(min-width: 992px) {
+    nav ul li::after {
+        content: '';
+        display: block;
+        height: 2.5px;
+        width: 0;
+        transition: width 0.4s ease-in-out;
+    }
+
+    nav ul li.active::after,
+    nav ul li:hover::after {
+        width: 90%;
+        background: var(--nav-underline-color);
+    }
+}
+
+nav ul li:hover {
+    border-radius: 10px;
+    transition: background 0.25s ease-in-out;
+}
+
+nav ul li a {
+    color: #333333 !important;
+    background: transparent!important;
+}
+
+nav .button a {
+    padding: 10px 20px;
+    font-weight: 600;
+    background: var(--primary-color);
+    color: #FFF;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+
+nav .button a:hover {
+    background: #FFF !important;
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color);
+}
+
+@media(min-width: 992px) {
+    nav ul li.shrink {
+        display: none;
+    }
+}
+
+@media(max-width: 992px) {
+    nav .button {
+        display: none;
+    }
+}
+
+.navbar-toggler {
+    color: #000;
+    border: 0;
+    outline: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
