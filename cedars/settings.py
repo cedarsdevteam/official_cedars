@@ -22,7 +22,7 @@ SECRET_KEY = "django-insecure-wv6ovdw8-s*^#k&2-o6$os(i0ebi)j8-s9ha=fvdf)5fm-0+z0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["cedars-hub.azurewebsites.net"]
+ALLOWED_HOSTS = ["https://cedars-hub.azurewebsites.net"]
 
 
 # Application definition
@@ -119,7 +119,3 @@ STATICFILES_DIRS = [BASE_DIR, 'cedars-productivity-centre/build/static']
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-try:
-    from .local_settings import *
-except ImportError:
-    pass
