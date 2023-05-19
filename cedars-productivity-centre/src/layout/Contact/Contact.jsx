@@ -38,9 +38,11 @@ const Contact = () => {
                                 <div className="col-1">
                                     <img src={mail} alt="mailbox" />
                                 </div>
+                                <Link to='#' onClick={(e) => {window.location.href ='mailto:info@cedarsprohub.com';}}>
                                 <small>
                                     info@cedarsprohub.com
                                 </small>
+                                </Link>
                             </div>
                             {/* each detail */}
 
@@ -48,9 +50,11 @@ const Contact = () => {
                                 <div className="col-1">
                                     <img src={phone} alt="phone" />
                                 </div>
+                                <Link to='#' onClick={(e) => {window.location.href ='tel:+2340813 339 6417';}}>
                                 <small>
-                                    0813 339 6417
+                                    +2340813 339 6417
                                 </small>
+                                </Link>
                             </div>
                             {/* each detail */}
 
@@ -58,26 +62,28 @@ const Contact = () => {
                                 <div className="col-1">
                                     <img src={linkedin} alt="linkedin" />
                                 </div>
+                                <Link to="https://www.linkedin.com/company/cedars-productivity-centre/" target="_blank">
                                 <small>
                                     cedars productivity centre
                                 </small>
+                                </Link>
                             </div>
                             {/* each detail */}
 
                             {/* socials icon */}
                             <div className=" socials d-flex justify-content-start align-items-center col-12">
                                 <div className="col-1">
-                                    <Link to={{ pathname: "https://www.instagram.com/thisiscedars/" }} target="_blank">
+                                    <Link to="https://www.instagram.com/thisiscedars/" target="_blank">
                                         <img src={instagram} alt="instagram-social" />
                                     </Link>
                                 </div>
                                 <div className="col-1">
-                                    <Link to={{ pathname: "https://twitter.com/thisiscedars" }} target="_blank">
+                                    <Link to="https://twitter.com/thisiscedars" target="_blank">
                                         <img src={twitter} alt="twitter-social" />
                                     </Link>
                                 </div>
                                 <div className="col-1">
-                                    <Link to={{ pathname: "https://web.facebook.com/thisiscedars" }} target="_blank">
+                                    <Link to="https://web.facebook.com/thisiscedars" target="_blank">
                                         <img src={facebook} alt="facebook-social" />
                                     </Link>
                                 </div>

@@ -37,22 +37,22 @@ const Footer = () => {
                             <div className="d-flex justify-content-around">
                                 
                                 <span>
-                                    <Link to="https://www.linkedin.com/in/cedars-prohub-7ba9b0230/?originalSubdomain=ng" target="_blank">
+                                    <Link to="https://www.linkedin.com/company/cedars-productivity-centre/" target="_blank">
                                     <img src={Linkedin} alt="Linkedin-ico" />
                                     </Link>
                                 </span>
                                 <span>
-                                    <Link to={{ pathname: "https://web.facebook.com/thisiscedars" }} target="_blank">
+                                    <Link to="https://web.facebook.com/thisiscedars" target="_blank">
                                     <img src={Facebook} alt="f-ico" />
                                     </Link>
                                 </span>
                                 <span>
-                                    <Link to={{ pathname: "https://www.instagram.com/thisiscedars/" }} target="_blank">
+                                    <Link to="https://www.instagram.com/thisiscedars/" target="_blank">
                                         <img src={Instagram} alt="Insta-ico" />
                                     </Link>
                                 </span>
                                 <span>
-                                    <Link to={{ pathname: "https://twitter.com/thisiscedars" }} target="_blank">
+                                    <Link to="https://twitter.com/thisiscedars" target="_blank">
                                         <img src={Twitter} alt="Twitter-ico" />
                                     </Link>
                                 </span>

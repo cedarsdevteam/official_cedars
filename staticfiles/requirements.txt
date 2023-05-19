@@ -1,0 +1,14 @@
+colorama
+decorators
+Django
+django-ckeditor
+django-taggit
+djangorestframework
+Pillow
+psycopg2
+psycopg2-binary
+send-mail
+six
+validate-email
+virtualenv
+whitenoise
