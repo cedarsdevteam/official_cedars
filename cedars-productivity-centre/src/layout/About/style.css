@@ -84,3 +84,19 @@
         font-size: 15px;
     }
 }
+
+@media(max-width: 576px) {
+    #about .about-hero .row {
+        padding: 0;
+    }
+
+    #about .about-hero .about-hero-bg {
+        height: 300px;
+    }
+}
+
+@media(max-width: 376px) {
+    .about-hero.hero-main-bg {
+        padding: 0!important;
+    }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import backToTop from '../../../images/back-to-top.svg';
+import { Link } from 'react-router-dom';
 
 const BackToTop = () => {
 
@@ -27,9 +28,9 @@ const BackToTop = () => {
   return (
     <div className="fade-icon">
       {/* Back to top button */}
-      <a href="#" className="back-to-top">
+      <Link to="#" className="back-to-top">
         <img src={backToTop} alt="back-to-top-icon" />
-      </a>
+      </Link>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import contentImage from '../../../images/blog-content/sub-content.png';
 import Comments from '../CommentSection';
 import { Person } from 'react-bootstrap-icons';
+import BackToTop from '../../Others/BackToTop/index'
 import './style.css';
 
 export class SubBlog extends Component {
@@ -54,11 +55,11 @@ export class SubBlog extends Component {
         return (
             <div id="Blog">
                 <div className="blog-hero hero-main-bg">
-                    <div className="container">
+                    <div className="container-lg">
                         <div className="blog-cover"></div>
                     </div>
                 </div>
-                <div className="blog-content container d-flex justify-content-between">
+                <div className="blog-content container-lg d-flex justify-content-between">
                     <div className="main-content col-md-8">
                         <h1>Professional Development</h1>
                         <p>
@@ -165,6 +166,7 @@ export class SubBlog extends Component {
 
                     <Comments createComment={this.createComment} />
                 </div>
+                <BackToTop />
             </div>
         )
     }

@@ -39,6 +39,12 @@
     }
 }
 
+@media(max-width: 414px) {
+    #Programs .programs-bg{
+        height: 400px;
+    }
+}
+
 /*-----------------------------
     # What to Expect
 ----------------------------*/

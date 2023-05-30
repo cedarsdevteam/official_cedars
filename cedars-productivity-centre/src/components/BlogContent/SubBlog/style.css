@@ -1,4 +1,4 @@
-#Blog .hero-main-bg .container{
+#Blog .hero-main-bg>div{
     margin-top: 80px;
 }
 
@@ -6,6 +6,12 @@
     #Blog .hero-main-bg {
         background: url(../../../images/main-bg-light.svg);
         background-position: center;
+    }
+}
+
+@media(max-width: 991px) {
+    #Blog .hero-main-bg>div {
+        margin-top: 0;
     }
 }
 
