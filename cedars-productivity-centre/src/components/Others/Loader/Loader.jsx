@@ -23,9 +23,10 @@ const Loader = () => {
 }
 
 function initLoader() {
-    const loader = document.querySelector('#page-loader');
     
     window.onload = () =>{
+        const loader = document.querySelector('#page-loader');
+
         if(loader)
         loader.classList.toggle('active')
         setTimeout(() => {
@@ -35,8 +36,9 @@ function initLoader() {
     }
     
     window.onbeforeunload = () => {
+        const loader = document.querySelector('#page-loader');
+        
         loader.classList.toggle('active')
-    
         setTimeout(() => {
             loader.classList.toggle('active')
         }, 2000)
