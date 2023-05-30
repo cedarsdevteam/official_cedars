@@ -13,7 +13,7 @@ const BlogBox = () => {
                     <div className="blog-bg"></div>
                     <div className="content">
                         <h4 className="title">DIGITAL LITERACY CAMPAIGN</h4>
-                        <p className="text-content" max-37="true">
+                        <p className="text-content">
                             In October 2019 we launched a Digital Literacy
                             Campaign (DLC) for schools within Bonny Island to
                             expose secondary school students and young people
@@ -33,7 +33,7 @@ const BlogBox = () => {
                     <div className="blog-bg"></div>
                     <div className="content">
                         <h4 className="title">COMMUNITY OUTREACH</h4>
-                        <p className="text-content" max-37="true">
+                        <p className="text-content">
                             Building relationships with community organizations
                             and leaders to understand the unique needs
                             and challenges of each community we serve    
@@ -50,7 +50,7 @@ const BlogBox = () => {
                     <div className="blog-bg"></div>
                     <div className="content">
                         <h4 className="title">IDEATION HUB</h4>
-                        <p className="text-content" max-37="true">
+                        <p className="text-content">
                             Welcome to our ideation hub, a platform designed to
                             foster creativity, collaboration, and innovation. It is a
                             place where we brainstorm, plan, and tap into the collective 

@@ -13,7 +13,7 @@ const Loader = () => {
 
 
     // Toggle window
-    toggleLoader()
+    initLoader()
 
   return (
     <div id="page-loader" className="text-center">
@@ -22,12 +22,14 @@ const Loader = () => {
   )
 }
 
-export function toggleLoader() {
+function initLoader() {
     const loader = document.querySelector('#page-loader');
     
     window.onload = () =>{
+        if(loader)
         loader.classList.toggle('active')
         setTimeout(() => {
+            if(loader)
             loader.classList.toggle('active')
         }, 2000)
     }
@@ -39,6 +41,16 @@ export function toggleLoader() {
             loader.classList.toggle('active')
         }, 2000)
     }
+
+}
+
+export function toggleLoader() {
+    const loader = document.querySelector('#page-loader');
+
+    loader.classList.toggle('active')
+    setTimeout(() => {
+        loader.classList.toggle('active')
+    }, 1500)
 }
 
 export default Loader;

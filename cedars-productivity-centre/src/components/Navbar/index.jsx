@@ -64,6 +64,9 @@ const Navbar = () => {
             break;
     }
 
+    // activate page loader
+    const activateLoader = () =>  toggleLoader()
+
     return (
         <div id="nav">
             <nav className="navbar navbar-expand-lg">
@@ -86,7 +89,7 @@ const Navbar = () => {
                         <ul className="navbar-nav col d-flex justify-content-evenly mt-2 mt-lg-0">
                             {
                                 Navlist.map((item, key) => {
-                                    return <li className="nav-item p-2 pb-2 p-lg-0" key={key}>
+                                    return <li className="nav-item p-2 pb-2 p-lg-0" key={key} onClick={activateLoader}>
                                         <Link className="nav-link p-0 ps-1 p-lg-0" to={item.to}>
                                             {item.label}
                                         </Link>
@@ -95,7 +98,7 @@ const Navbar = () => {
                             }
 
                             <li className="nav-item shrink p-2 pb-2 p-lg-0">
-                                <Link className="nav-link p-0 ps-1 p-lg-0" to={"/get-involved"}>
+                                <Link className="nav-link p-0 ps-1 p-lg-0" to={"/get-involved"} onClick={activateLoader}>
                                     Get Involved
                                 </Link>
                             </li>
