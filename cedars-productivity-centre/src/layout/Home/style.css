@@ -245,6 +245,12 @@
     }
 }
 
+@media(max-width: 476px) {
+    .training-programs .header h1{
+        font-size: calc(30px + .20vw);
+    }
+}
+
 /*-------------------------------------
     # Get Involved Section
 -------------------------------------*/

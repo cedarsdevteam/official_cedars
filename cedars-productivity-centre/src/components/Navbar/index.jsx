@@ -106,7 +106,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="col button text-end">
-                        <Link className="btn" to={"/get-involved"}>Get Involved</Link>
+                        <Link className="btn" to={"/get-involved"} onClick={activateLoader}>Get Involved</Link>
                     </div>
                 </div>
             </nav>
