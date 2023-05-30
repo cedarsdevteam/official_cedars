@@ -1,8 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import BackToTop from '../../components/Others/BackToTop/index';
 import BlogBox from '../../components/BlogContent/BlogBox/BlogBox';
-import arrowWhite from '../../images/our-programs-content/arrow_white.svg';
 import './style.css';
 import OurPrograms from '../../components/AboutContent/OurPrograms';
 
@@ -81,7 +78,6 @@ const Programs = () => {
             <BlogBox />
         </div>
 
-        <BackToTop />
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BackToTop from '../../components/Others/BackToTop';
 import WhoWeAre from '../../components/HomeContent/WhoWeAre';
 import Testimonies from '../../components/HomeContent/Testimonies';
 import TrainingPrograms from '../../components/HomeContent/TrainingPrograms';
@@ -8,9 +7,9 @@ import Getinvolved from '../../components/HomeContent/GetInvolvedSection';
 import OurImpact from '../../components/HomeContent/OurImpact/OurImpact';
 import OurPrograms from '../../components/AboutContent/OurPrograms/index';
 import CoreValues from '../../components/HomeContent/CoreValues';
-import './style.css';
 import OurServices from '../../components/HomeContent/OurServices';
 import NewsLetter from '../NewsLetter/NewsLetter';
+import './style.css';
 
 const Home = () => {
         
@@ -60,9 +59,6 @@ const Home = () => {
 
             {/* Get Invlolved Section */}
             <Getinvolved />
-
-            {/* Back to top */}
-            <BackToTop />
 
             {/* News Letter Popup */}
             {/* <NewsLetter /> */}

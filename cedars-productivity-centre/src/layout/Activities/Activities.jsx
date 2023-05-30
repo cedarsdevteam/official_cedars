@@ -1,5 +1,4 @@
 import React from 'react';
-import BackToTop from '../../components/Others/BackToTop/index';
 import BlogBox from '../../components/BlogContent/BlogBox/BlogBox';
 import GetInvolved from '../../components/HomeContent/GetInvolvedSection';
 
@@ -38,8 +37,6 @@ const Activities = () => {
             <BlogBox />
 
             <GetInvolved />
-
-            <BackToTop />
         </div>
     )
 }

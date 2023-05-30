@@ -6,6 +6,7 @@ import { Navlist } from '../../utilities/Navutils';
 import './style.css';
 import 'jquery/dist/jquery.slim';
 import { List, X } from 'react-bootstrap-icons';
+import { toggleLoader } from '../Others/Loader/Loader'
 
 const Navbar = () => {
 
@@ -19,7 +20,7 @@ const Navbar = () => {
     
     const navLinks = document.querySelectorAll('nav ul li.nav-item');
 
-    function toggleNav (link) {
+    function h (link) {
         let i = 0;
         while (i < navLinks.length) {
             if (navLinks[i].classList.contains('active')) {

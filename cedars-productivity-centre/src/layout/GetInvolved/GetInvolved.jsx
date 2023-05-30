@@ -1,5 +1,4 @@
 import React from 'react';
-import BackToTop from '../../components/Others/BackToTop/index';
 import GetInvolvedForm from '../../components/Others/GetInvolvedForm';
 import './style.css';
 
@@ -31,7 +30,7 @@ const GetInvolved = () => {
                 </div>
             </div>
         </div>
-        <BackToTop />
+
     </div>
   )
 }

@@ -10,6 +10,8 @@ import Activities from './layout/Activities/Activities';
 import Contact from './layout/Contact/Contact';
 import GetInvolved from './layout/GetInvolved/GetInvolved';
 import SubBlog from './components/BlogContent/SubBlog/index'
+import Loader from './components/Others/Loader/Loader';
+import BackToTop from './components/Others/BackToTop';
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
         <Route path='/blog' element={<SubBlog />} />
       </Routes>
 
+      {/* Page Loader */}
+      <Loader />
+
+      {/* Back to top button */}
+      <BackToTop />
+      
       <Footer />
     </div>
   );

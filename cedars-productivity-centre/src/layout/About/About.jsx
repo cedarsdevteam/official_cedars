@@ -1,5 +1,4 @@
 import React from 'react';
-import BackToTop from '../../components/Others/BackToTop';
 import WhoWeAre from '../../components/HomeContent/WhoWeAre';
 import OurBoard from '../../components/AboutContent/OurBoard';
 import Testimonies from '../../components/HomeContent/Testimonies';
@@ -65,9 +64,6 @@ const About = () => {
 
         {/* Get Involved Section */}
         <GetInvolved />
-
-        {/* Back to top btn */}
-        <BackToTop />
     </div>
   )
 }

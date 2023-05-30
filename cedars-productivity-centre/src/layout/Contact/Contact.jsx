@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BackToTop from '../../components/Others/BackToTop/index';
 import ContactForm from '../../components/Others/ContactForm';
 import facebook from '../../images/contact_icons/facebook.svg';
 import instagram from '../../images/contact_icons/instagram.svg';
@@ -98,8 +97,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-
-            <BackToTop />
+            
         </div>
     )
 }

@@ -18,6 +18,7 @@
     --dark-header: #2A6000;
     --error-color: #FE4000;
     --arrow-bg: #AAC780;
+    --arrow-bg-light: #aac780b3;
     --footer-bg-color: #ebf2e180;
     --footer-primary-color: #2A6000;
 }
@@ -66,8 +67,13 @@ button:focus,
 
 .back-to-top.active{
     display: block;
+    background: var(--arrow-bg-light);
     opacity: 1;
     transition: opacity 2s ease-in-out!important;
+}
+
+.back-to-top:hover{
+    background: var(--arrow-bg)!important;
 }
 
 .hero-main-bg{
@@ -124,4 +130,50 @@ button:focus,
 .hero-main-bg .row {
     justify-content: center;
     align-items: center;
+}
+
+/*------------------------
+    # Page loader
+--------------------------*/
+#page-loader{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    background: #fff;
+}
+
+#page-loader.active{
+    visibility: visible;
+}
+
+#page-loader .loader{
+    background: url(images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 100px;
+    animation-name: page-loader;
+    animation-timing-function: linear; 
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes page-loader {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(0.8);
+    }
 }
