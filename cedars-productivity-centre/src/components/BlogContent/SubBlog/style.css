@@ -150,3 +150,10 @@
         max-width: 96%;
     }
 }
+
+
+@media(max-width: 567px) {
+    #Blog .blog-content .blog-card-content-row{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
