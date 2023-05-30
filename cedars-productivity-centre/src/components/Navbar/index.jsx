@@ -20,7 +20,7 @@ const Navbar = () => {
     
     const navLinks = document.querySelectorAll('nav ul li.nav-item');
 
-    function h (link) {
+    function toggleNav (link) {
         let i = 0;
         while (i < navLinks.length) {
             if (navLinks[i].classList.contains('active')) {
