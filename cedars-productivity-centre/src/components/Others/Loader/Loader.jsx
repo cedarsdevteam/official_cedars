@@ -45,8 +45,11 @@ function initLoader() {
 export function toggleLoader() {
     const loader = document.querySelector('#page-loader');
 
+    if(loader)
     loader.classList.add('active')
+
     setTimeout(() => {
+        if(loader)
         loader.classList.remove('active')
     }, 1500)
 }

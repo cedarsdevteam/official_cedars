@@ -15,9 +15,9 @@ const Navbar = () => {
     const handleClick = () => {
         setClick(!click)
     }
-    
+
     const location = useLocation().pathname;
-    
+
     const navLinks = document.querySelectorAll('nav ul li.nav-item');
 
     function toggleNav (link) {
@@ -33,18 +33,21 @@ const Navbar = () => {
         link.classList.toggle('active');
     }
 
-    // Navbar active state
+    // Navbar active state and toggle loader
     switch (location) {
         case '/':
             toggleNav(navLinks[0])
+            toggleLoader()
             break;
 
         case '/about':
             toggleNav(navLinks[1])
+            toggleLoader()
             break;
 
         case '/programs':
             toggleNav(navLinks[2])
+            toggleLoader()
             break;
 
         case '/activities':
@@ -53,19 +56,26 @@ const Navbar = () => {
 
         case '/blog':
             toggleNav(navLinks[3])
+            toggleLoader()
             break;
 
         case '/contact':
             toggleNav(navLinks[4])
+            toggleLoader()
+            break;
+
+        case '/blog':
+            toggleLoader()
+            break;
+
+        case '/get-involved':
+            toggleLoader()
             break;
     
         default:
             toggleNav(null)
             break;
     }
-
-    // activate page loader
-    const activateLoader = () =>  toggleLoader()
 
     return (
         <div id="nav">
@@ -89,7 +99,7 @@ const Navbar = () => {
                         <ul className="navbar-nav col d-flex justify-content-evenly mt-2 mt-lg-0">
                             {
                                 Navlist.map((item, key) => {
-                                    return <li className="nav-item p-2 pb-2 p-lg-0" key={key} onClick={activateLoader}>
+                                    return <li className="nav-item p-2 pb-2 p-lg-0" key={key} >
                                         <Link className="nav-link p-0 ps-1 p-lg-0" to={item.to}>
                                             {item.label}
                                         </Link>
@@ -98,7 +108,7 @@ const Navbar = () => {
                             }
 
                             <li className="nav-item shrink p-2 pb-2 p-lg-0">
-                                <Link className="nav-link p-0 ps-1 p-lg-0" to={"/get-involved"} onClick={activateLoader}>
+                                <Link className="nav-link p-0 ps-1 p-lg-0" to={"/get-involved"} >
                                     Get Involved
                                 </Link>
                             </li>
@@ -106,7 +116,7 @@ const Navbar = () => {
                     </div>
 
                     <div className="col button text-end">
-                        <Link className="btn" to={"/get-involved"} onClick={activateLoader}>Get Involved</Link>
+                        <Link className="btn" to={"/get-involved"} >Get Involved</Link>
                     </div>
                 </div>
             </nav>
