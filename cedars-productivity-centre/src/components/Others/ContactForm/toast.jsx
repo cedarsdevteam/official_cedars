@@ -9,19 +9,19 @@ function AutohideToast() {
 
   return (
     <div>
-        <Col xs={6}>
+        <Col style={{ position: 'fixed', bottom: '1rem', left: '1rem' }} >
             <Toast onClose={() => setShow(true)} show={show} delay={3000} autohide>
             <Toast.Header>
-                <strong className="me-auto">Bootstrap</strong>
+                <strong className="me-auto">Message</strong>
                 <small>11 mins ago</small>
             </Toast.Header>
             <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
             </Toast>
         </Col>
         
-        <Col xs={6}>
+        {/* <Col xs={6}>
             <Button onClick={() => setShow(true)}>Show Toast</Button>
-        </Col>
+        </Col> */}
     </div>
   );
 }
