@@ -22,7 +22,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+    'testimonie',
+    'contact',
+    'ckeditor',
+    'rest_framework',
     "whitenoise.runserver_nostatic",
 ]
 
