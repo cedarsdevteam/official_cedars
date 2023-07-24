@@ -1,10 +1,20 @@
+from drf_spectacular.utils import extend_schema
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from .models import Contact, NewsLetter
 from .serializers import ContactSerializer, NewsLetterSerializer
+from drf_spectacular.utils import extend_schema
 
+
+
+@extend_schema(
+    request=ContactSerializer,
+    responses={status.HTTP_201_CREATED: ContactSerializer},
+    description="This is the contact form, this form is means for people to reach out to us",
+    tags=["Contact"],
+)
 class ContactFormView(APIView):
     serializer_class = ContactSerializer
     def post(self, request, format=None):
@@ -14,7 +24,14 @@ class ContactFormView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    
+
+
+@extend_schema(
+    request=NewsLetterSerializer,
+    responses={status.HTTP_201_CREATED: NewsLetterSerializer},
+    description="This is the newsletter signup form, this form is to get the email of those who which to signup for our newslatter",
+    tags=["Contact"],
+)    
 class NewsLetterView(APIView):
     serializer_class = NewsLetterSerializer
 
