@@ -12,7 +12,7 @@ class Contact(models.Model):
         verbose_name_plural = "Contact Form Response"
 
     def __str__(self):
-        return self.sender
+        return str(self.sender)
 
 
 class NewsLetter(models.Model):
@@ -23,4 +23,4 @@ class NewsLetter(models.Model):
         verbose_name_plural = "News Letter"
 
     def __str__(self):
-        return self.email
+        return str(self.email)
