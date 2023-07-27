@@ -3,7 +3,6 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Testimony
 from .serializers import TestimonySerializer
-from django.utils.safestring import mark_safe
 
 class TestimonyListView(APIView):
     serializer_class = TestimonySerializer

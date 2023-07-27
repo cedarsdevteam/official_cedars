@@ -3,7 +3,7 @@ from ckeditor.fields import RichTextField
 
 
 
-class  Testimony(models.Model):
+class Testimony(models.Model):
     name = models.CharField(max_length=150, blank=True)
     testimony = RichTextField(blank=False, null=True)
     position = models.CharField(max_length=150, blank=False)
@@ -13,4 +13,3 @@ class  Testimony(models.Model):
 
     def __str__(self):
         return str(self.name)
-

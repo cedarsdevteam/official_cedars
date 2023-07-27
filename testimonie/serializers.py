@@ -1,6 +1,7 @@
+import re
 from rest_framework import serializers
 from .models import Testimony
-import re
+
 
 
 class TestimonySerializer(serializers.ModelSerializer):

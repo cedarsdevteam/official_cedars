@@ -66,9 +66,16 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cedars',
+        'USER': 'cedars@cedars',
+        'PASSWORD': '________Chub',
+        'HOST': 'cedars.postgres.database.azure.com',
+        'PORT': '5432',
+        "OPTIONS":{
+            'sslmode':'require'
+        }
     }
 }
 
@@ -118,4 +125,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
