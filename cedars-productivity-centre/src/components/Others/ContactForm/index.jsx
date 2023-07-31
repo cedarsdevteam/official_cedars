@@ -1,111 +1,138 @@
-import React, { Component } from 'react';
-import AutohideToast from './toast';
+import React, { useState } from 'react';
 import './c-style.css';
 
-export class ContactForm extends Component {
-    state = {
-        error: null,
-    };
+const ContactForm = (props) => {
 
-    handleSubmit = (event) => {
-        event.preventDefault();
-        // Set alert {validation for empty user value}
-        if(this.state.text === '' || this.state.email === '' || this.state.message === ''){
-            // Call error toast and state
-            // this.props.setAlert('Please enter something', 'light')
-        } else{
-            // ** Success
-            // Passing the user data up through props
-            this.props.formDatas(this.state.text);
+  var state = {
+    error: null
+  }
 
-            this.setState({ text: '', email: '', message: '' })
+  // Initialize states
+  const [name, setName] = useState('');
+  const [subject, setSubject] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+
+    if (name && subject && email && message !== '') {
+      // Validation shouldn't be to rigid since it's a contact form
+        if(name.length > 5 && subject.length > 4 && email.length > 7 && message.length > 10){
+          const data = {
+            "sender": name,
+            "subject": subject,
+            "email": email,
+            "message": message,
+          }
+    
+          // Send Request
+          postMessage(data);
+    
+          // return inputs to default state
+          setName('')
+          setSubject('')
+          setEmail('')
+          setMessage('')
         }
-
-        console.log(this.state.text);
+    } else{
+      e.preventDefault();
+      // toggle error state/ log error fn
+      console.error('Invalid input on contact form');
     }
+  }
 
-    handleChange = (e) => {
-        // For multiple inputs
-        this.setState({ [e.target.name]: e.target.value });
-    }
+  const { header, subText } = props;
 
-    render() {
-        const { header, subText } = this.props;
+  return (
+    <div>
+      <div className="header text-start mb-5">
+        <h1>{header}</h1>
+        <h5>{subText}</h5>
+      </div>
+      <form onSubmit={handleSubmit}>
+        <input type="text" className="form-control" name="text" placeholder="Full name"
+          onChange={e => setName(e.target.value)} value={name} />
 
-        return (
-            <div>
-                <div className="header text-start mb-5">
-                    <h1>{header}</h1>
-                    <h5>{subText}</h5>
-                </div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" className="form-control" name="text" placeholder="Your name"
-                        onChange={this.handleChange} value={this.state.text} />
+        <input type="email" name="email" className="form-control" placeholder="Email Address"
+          onChange={e => setEmail(e.target.value)} value={email} />
 
-                    <input type="email" name="email" className="form-control" placeholder="Enter your email address"
-                        onChange={this.handleChange} value={this.state.email} />
+        <input type="text" name="subject" className="form-control" placeholder="Subject"
+          onChange={e => setSubject(e.target.value)} value={subject} />
 
-                    <textarea className="form-control" cols="30" rows="10" name="message" placeholder="Your message"
-                        onChange={this.handleChange} value={this.state.message}></textarea>
+        <textarea className="form-control" cols="30" rows="10" name="message" placeholder="Message"
+          onChange={e => setMessage(e.target.value)} value={message}></textarea>
 
-                    <button className="get-involved-btn btn mt-2" type="submit">Get Involved</button>
-                </form>
-
-                <AutohideToast />
-            </div>
-        )
-    }
+        <button className="get-involved-btn btn mt-2" type="submit">Get Involved</button>
+      </form>
+    </div>
+  )
 }
+
 
 ContactForm.defaultProps = {
-    header: 'Get in touch',
-    subText: 'feel free to get in touch with us'
+  header: 'Get in touch',
+  subText: 'feel free to get in touch with us'
 };
 
-function validateForm(name, email, message) {
+export default ContactForm;
 
-    console.log(this.state.error, 'error state');
 
-    const validateNames = () => {
-        // regexp condition = names must not be 2 < 15
-        const re = /^[a-z]{2,}$/i;
+const postMessage = async (data) => {
+  const url = 'https://cedarsprohub.com/api/contact';
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    });
 
-        if (!re.test(name)) {
-            // throw error and set error state
-            // init toast
-            // name.classList.add('is-invalid')
-            this.state.error = true;
-            name.focus()
+    const res = await response.json();
+    // handle response data
+    console.log(res);
+    return res;
 
-        } else {
-            // success
-            // init toast
-            // name.classList.remove('is-invalid')
-            this.state.error = false;
-        }
-    }
-
-    const validateEmail = () => {
-        // regexp condition @mail !< 3, .com !< 2
-        const re = /^([a-z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-        if (!re.test(email)) {
-            // init toast
-            // email.classList.add('is-invalid')
-            this.state.error = true;
-            email.focus()
-        } else {
-            // init toast
-            // email.classList.remove('is-invalid')
-            this.state.error = false;
-        }
-    }
-
-    const validateMessage = () => {
-        if(message.length > 2){
-            console.log('error');
-        }
-    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 
-export default ContactForm;
+// const validateNames = () => {
+//   const names = document.querySelectorAll('[validate="name"]');
+//   // regexp condition = names must not be 2 < 15
+//   const re = /^[a-z]{5,}$/i;
+
+//   names.forEach(name => {
+
+//     if (name)
+//       if (!re.test(name.value)) {
+//         // throw error and set error state
+//         name.classList.add('is-invalid')
+//         state.error = true;
+//         name.focus()
+
+//       } else {
+//         // success
+//         name.classList.remove('is-invalid')
+//         state.errDone = false;
+//       }
+
+//   })
+// }
+
+// const validateEmail = () => {
+//   const email = document.querySelector('[validate="email"]');
+//   // regexp condition @mail !< 3, .com !< 2
+//   const re = /^([a-z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+//   if (email)
+//     if (!re.test(email.value)) {
+//       email.classList.add('is-invalid')
+//       state.error = true;
+//       email.focus()
+//     } else {
+//       email.classList.remove('is-invalid')
+//       state.errDone = false;
+//     }
+// }

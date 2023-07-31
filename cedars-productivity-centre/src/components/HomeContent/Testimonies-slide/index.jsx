@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.min.css';
@@ -9,6 +9,12 @@ import SwiperCore, { Autoplay } from 'swiper';
 import { Pagination, Navigation } from 'swiper';
 
 const TestimoniesSlide = () => {
+    var Data;
+    useEffect(() => {
+        return () => Data = testimoniesData();
+        // eslint-disable-next-line
+    }, [])
+
     // Using autoplay
     SwiperCore.use([Autoplay]);
 
@@ -34,6 +40,26 @@ const TestimoniesSlide = () => {
                 className="mySwiper"
             >
 
+                {
+                    Data && Data.map((data) => (
+                        <SwiperSlide key={data.id} className="testimonial-item">
+                            <div className="row justify-content-center">
+                                <div className="col-6 content">
+                                    <p>
+                                        {data.testimony}
+                                    </p>
+                                    <h3 className="name">{data.name}</h3>
+                                    <h4 className="title">{data.position}</h4>
+                                </div>
+                                <div className="col-3 text-center img" 
+                                style={{ 
+                                    background: `url(${data.picture})!important`
+                                 }}>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
 
                 <SwiperSlide className="testimonial-item">
                     <div className="row justify-content-center">
@@ -90,3 +116,10 @@ const TestimoniesSlide = () => {
 }
 
 export default TestimoniesSlide;
+
+
+const testimoniesData = async () => {
+    const res = await fetch('https://cedarsprohub.com/api/testimonies')
+
+    return res.json();
+}
