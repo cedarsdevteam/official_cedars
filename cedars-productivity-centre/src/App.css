@@ -151,9 +151,9 @@ button:focus,
 #page-loader.active{
     visibility: visible;
 }
-
+ 
 #page-loader .loader{
-    background: url(images/logo.svg);
+    background: url(images/logo.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     width: 250px;

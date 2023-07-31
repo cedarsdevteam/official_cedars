@@ -10,7 +10,7 @@ SECRET_KEY = "django-insecure-wv6ovdw8-s*^#k&2-o6$os(i0ebi)j8-s9ha=fvdf)5fm-0+z0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["20.119.8.29", "www.cedarsprohub.com", "cedarsprohub.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -22,8 +22,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+    'testimonie',
+    'contact',
+    'ckeditor',
+    'rest_framework',
     "whitenoise.runserver_nostatic",
+    "drf_spectacular",
 ]
 
 MIDDLEWARE = [
@@ -62,12 +66,22 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cedars',
+        'USER': 'cedars@cedars',
+        'PASSWORD': '________Chub',
+        'HOST': 'cedars.postgres.database.azure.com',
+        'PORT': '5432',
+        "OPTIONS":{
+            'sslmode':'require'
+        }
     }
 }
 
+REST_FRAMEWORK = {
+    "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -111,4 +125,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
