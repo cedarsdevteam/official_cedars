@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './c-style.css';
 
-const ContactForm = (props) => {
+const ContactForm = () => {
 
   var state = {
     error: null
@@ -41,13 +41,11 @@ const ContactForm = (props) => {
     }
   }
 
-  const { header, subText } = props;
-
   return (
     <div>
       <div className="header text-start mb-5">
-        <h1>{header}</h1>
-        <h5>{subText}</h5>
+        <h1>Get in touch</h1>
+        <h5>feel free to get in touch with us</h5>
       </div>
       <form onSubmit={handleSubmit}>
         <input type="text" className="form-control" name="text" placeholder="Full name"
@@ -67,12 +65,6 @@ const ContactForm = (props) => {
     </div>
   )
 }
-
-
-ContactForm.defaultProps = {
-  header: 'Get in touch',
-  subText: 'feel free to get in touch with us'
-};
 
 export default ContactForm;
 
