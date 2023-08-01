@@ -10,7 +10,8 @@ SECRET_KEY = "django-insecure-wv6ovdw8-s*^#k&2-o6$os(i0ebi)j8-s9ha=fvdf)5fm-0+z0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["*","20.119.8.29","cedarsprohub.com"]
+CSRF_TRUSTED_ORIGINS = ['https://*.cedarsprohub.com', 'https://*.20.119.8.29']
 
 
 # Application definition
@@ -65,17 +66,24 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'cedars-db',
+#         'USER': 'cedarsadmin@cedars-db',
+#         'PASSWORD': '______Chub',
+#         'HOST': 'cedars-db.postgres.database.azure.com',
+#         'PORT': '5432',
+#         "OPTIONS":{
+#             'sslmode':'require'
+#         }
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cedars',
-        'USER': 'cedars@cedars',
-        'PASSWORD': '________Chub',
-        'HOST': 'cedars.postgres.database.azure.com',
-        'PORT': '5432',
-        "OPTIONS":{
-            'sslmode':'require'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
