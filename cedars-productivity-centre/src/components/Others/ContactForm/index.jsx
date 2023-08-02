@@ -26,7 +26,10 @@ const ContactForm = () => {
           }
     
           // Send Request
+          e.preventDefault()
           postMessage(data);
+          console.log(data);
+
     
           // return inputs to default state
           setName('')
@@ -70,7 +73,7 @@ export default ContactForm;
 
 
 const postMessage = async (data) => {
-  const url = 'https://cedarsprohub.com/api/contact';
+  const url = 'http://127.0.0.1:8000/api/contact/';
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -82,7 +85,6 @@ const postMessage = async (data) => {
 
     const res = await response.json();
     // handle response data
-    console.log(res);
     return res;
 
   } catch (error) {

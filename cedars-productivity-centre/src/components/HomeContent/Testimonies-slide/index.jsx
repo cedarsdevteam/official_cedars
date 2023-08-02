@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.min.css';
@@ -9,11 +9,15 @@ import SwiperCore, { Autoplay } from 'swiper';
 import { Pagination, Navigation } from 'swiper';
 
 const TestimoniesSlide = () => {
-    var Data;
+    const [testimonyData, updateData] = useState(undefined);
+
     useEffect(() => {
-        return () => Data = testimoniesData();
-        // eslint-disable-next-line
+        testimoniesData()
+        .then(res => updateData(res))
+        .catch(err => console.log(err))
+    
     }, [])
+    
 
     // Using autoplay
     SwiperCore.use([Autoplay]);
@@ -41,7 +45,7 @@ const TestimoniesSlide = () => {
             >
 
                 {
-                    Data && Data.map((data) => (
+                    testimonyData && testimonyData.map((data) => (
                         <SwiperSlide key={data.id} className="testimonial-item">
                             <div className="row justify-content-center">
                                 <div className="col-6 content">
@@ -61,7 +65,7 @@ const TestimoniesSlide = () => {
                     ))
                 }
 
-                <SwiperSlide className="testimonial-item">
+                {/* <SwiperSlide className="testimonial-item">
                     <div className="row justify-content-center">
                         <div className="col-6 content">
                             <p>
@@ -74,40 +78,7 @@ const TestimoniesSlide = () => {
                         </div>
                         <div className="col-3 text-center img"></div>
                     </div>
-                </SwiperSlide>
-                {/* Testimonial slide */}
-
-
-                <SwiperSlide className="testimonial-item">
-                    <div className="row justify-content-center">
-                        <div className="col-6 content">
-                            <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                Maecen aliquam, risus at semper.
-                            </p>
-                            <h3 className="name">Cyprian Tochi</h3>
-                            <h4 className="title">Graphic Designer</h4>
-                        </div>
-                        <div className="col-3 text-center img"></div>
-                    </div>
-                </SwiperSlide>
-                {/* Testimonial slide */}
-
-                <SwiperSlide className="testimonial-item">
-                    <div className="row justify-content-center">
-                        <div className="col-6 content">
-                            <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                Maecen aliquam, risus at semper.
-                            </p>
-                            <h3 className="name">Cyprian Tochi</h3>
-                            <h4 className="title">Graphic Designer</h4>
-                        </div>
-                        <div className="col-3 text-center img"></div>
-                    </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 {/* Testimonial slide */}
 
             </Swiper>
@@ -119,7 +90,7 @@ export default TestimoniesSlide;
 
 
 const testimoniesData = async () => {
-    const res = await fetch('https://cedarsprohub.com/api/testimonies')
+    const res = await fetch('http://127.0.0.1:8000/api/testimonies/')
 
     return res.json();
 }

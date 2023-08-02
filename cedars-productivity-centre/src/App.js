@@ -29,7 +29,7 @@ function App() {
       </Routes>
 
       {/* Page Loader */}
-      <Loader />
+      {/* <Loader /> */}
 
       {/* Back to top button */}
       <BackToTop />

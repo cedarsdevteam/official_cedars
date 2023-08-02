@@ -20,7 +20,7 @@
 
 .testimonial-item .img {
     height: 210px;
-    background: url(../../../images/testimonials-content/testimonials-1.jpg);
+    /* background: url(../../../images/testimonials-content/testimonials-1.jpg); */
     background-size: cover;
     background-position: center;
     vertical-align: middle;
