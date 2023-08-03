@@ -12,6 +12,7 @@ import GetInvolved from './layout/GetInvolved/GetInvolved';
 import SubBlog from './components/BlogContent/SubBlog/index'
 import Loader from './components/Others/Loader/Loader';
 import BackToTop from './components/Others/BackToTop';
+import FormToast from './components/Others/Toasts/FormToast';
 
 function App() {
   return (
@@ -29,7 +30,10 @@ function App() {
       </Routes>
 
       {/* Page Loader */}
-      <Loader />
+      {/* <Loader /> */}
+
+      {/* Form Toasts */}
+      {/* <FormToast /> */}
 
       {/* Back to top button */}
       <BackToTop />

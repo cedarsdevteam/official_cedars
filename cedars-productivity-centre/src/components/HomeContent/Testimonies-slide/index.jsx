@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/swiper-bundle.min.css';
@@ -9,6 +9,16 @@ import SwiperCore, { Autoplay } from 'swiper';
 import { Pagination, Navigation } from 'swiper';
 
 const TestimoniesSlide = () => {
+    const [testimonyData, updateData] = useState(undefined);
+
+    useEffect(() => {
+        testimoniesData()
+        .then(res => updateData(res))
+        .catch(err => console.log(err))
+    
+    }, [])
+    
+
     // Using autoplay
     SwiperCore.use([Autoplay]);
 
@@ -34,8 +44,28 @@ const TestimoniesSlide = () => {
                 className="mySwiper"
             >
 
+                {
+                    testimonyData && testimonyData.map((data) => (
+                        <SwiperSlide key={data.id} className="testimonial-item">
+                            <div className="row justify-content-center">
+                                <div className="col-6 content">
+                                    <p>
+                                        {data.testimony}
+                                    </p>
+                                    <h3 className="name">{data.name}</h3>
+                                    <h4 className="title">{data.position}</h4>
+                                </div>
+                                <div className="col-3 text-center img" 
+                                style={{ 
+                                    background: `url(${data.picture})!important`
+                                 }}>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
 
-                <SwiperSlide className="testimonial-item">
+                {/* <SwiperSlide className="testimonial-item">
                     <div className="row justify-content-center">
                         <div className="col-6 content">
                             <p>
@@ -48,40 +78,7 @@ const TestimoniesSlide = () => {
                         </div>
                         <div className="col-3 text-center img"></div>
                     </div>
-                </SwiperSlide>
-                {/* Testimonial slide */}
-
-
-                <SwiperSlide className="testimonial-item">
-                    <div className="row justify-content-center">
-                        <div className="col-6 content">
-                            <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                Maecen aliquam, risus at semper.
-                            </p>
-                            <h3 className="name">Cyprian Tochi</h3>
-                            <h4 className="title">Graphic Designer</h4>
-                        </div>
-                        <div className="col-3 text-center img"></div>
-                    </div>
-                </SwiperSlide>
-                {/* Testimonial slide */}
-
-                <SwiperSlide className="testimonial-item">
-                    <div className="row justify-content-center">
-                        <div className="col-6 content">
-                            <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et.
-                                Maecen aliquam, risus at semper.
-                            </p>
-                            <h3 className="name">Cyprian Tochi</h3>
-                            <h4 className="title">Graphic Designer</h4>
-                        </div>
-                        <div className="col-3 text-center img"></div>
-                    </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 {/* Testimonial slide */}
 
             </Swiper>
@@ -90,3 +87,10 @@ const TestimoniesSlide = () => {
 }
 
 export default TestimoniesSlide;
+
+
+const testimoniesData = async () => {
+    const res = await fetch('http://127.0.0.1:8000/api/testimonies/')
+
+    return res.json();
+}
