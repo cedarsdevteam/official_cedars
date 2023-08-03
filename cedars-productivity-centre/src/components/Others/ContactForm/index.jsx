@@ -1,13 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './c-style.css';
 
-const ContactForm = () => {
+// components
+import FormToast from '../Toasts/FormToast';
 
-  var state = {
-    error: null
-  }
+const ContactForm = (props) => {
 
-  // Initialize states
+  // var state = {
+  //   error: null
+  // }
+  // Toast state
+  const [state, setState] = useState(null);
+  const [type, setType] = useState(null);
+  const [messages, setMessages] = useState(null);
+
+
+  // Form states
   const [name, setName] = useState('');
   const [subject, setSubject] = useState('');
   const [email, setEmail] = useState('');
@@ -28,6 +36,7 @@ const ContactForm = () => {
           // Send Request
           e.preventDefault()
           postMessage(data);
+          // toggleStateToast(true, 'Success', 'Message sent successfully')
           console.log(data);
 
     
@@ -40,8 +49,19 @@ const ContactForm = () => {
     } else{
       e.preventDefault();
       // toggle error state/ log error fn
+      toggleStateToast(true, 'Error', 'Invalid input, please try something else')
       console.error('Invalid input on contact form');
     }
+  }
+
+  const toggleStateToast = (state, type, messages) => {
+    setState(state);
+    setType(type);
+    setMessages(messages);
+    
+    setTimeout(() => {
+      setState(null);
+    }, 4000);
   }
 
   return (
@@ -65,6 +85,12 @@ const ContactForm = () => {
 
         <button className="get-involved-btn btn mt-2" type="submit">Get Involved</button>
       </form>
+
+      <FormToast
+        type={type}
+        state={state}
+        message={messages}
+       />
     </div>
   )
 }
@@ -85,6 +111,7 @@ const postMessage = async (data) => {
 
     const res = await response.json();
     // handle response data
+    console.log(res);
     return res;
 
   } catch (error) {
