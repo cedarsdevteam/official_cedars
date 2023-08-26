@@ -83,26 +83,26 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'postgres',
-#         'USER': 'cedars',
-#         'PASSWORD': '___Studios',
-#         'HOST': 'cedars.postgres.database.azure.com',
-#         'PORT': '5432',
-#         "OPTIONS":{
-#             'sslmode':'require'
-#         }
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'cedars',
+        'PASSWORD': '___Studios',
+        'HOST': 'cedars.postgres.database.azure.com',
+        'PORT': '5432',
+        "OPTIONS":{
+            'sslmode':'require'
+        }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
+#     }
+# }
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",
