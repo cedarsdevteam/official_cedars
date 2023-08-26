@@ -77,21 +77,21 @@
 .what-to-expect .w-card:nth-child(2) .img-bg,
 .what-to-expect .w-card:nth-child(3) .img-bg{
     height: 350px!important;
-    background-size: auto!important;
+    background-size: cover!important;
     background-position: center!important;
     background-repeat: no-repeat!important;
 }
 
 .what-to-expect .w-card:nth-child(1) .img-bg{
-    background: url(../../images/programs-content/expect-1.svg);
+    background: url(../../images/programs-content/expect-1.jpg);
 }
 
 .what-to-expect .w-card:nth-child(2) .img-bg{
-    background: url(../../images/programs-content/expect-2.svg);
+    background: url(../../images/programs-content/expect-2.jpg);
 }
 
 .what-to-expect .w-card:nth-child(3) .img-bg{
-    background: url(../../images/programs-content/expect-3.svg);
+    background: url(../../images/programs-content/expect-3.jpg);
 }
 
 

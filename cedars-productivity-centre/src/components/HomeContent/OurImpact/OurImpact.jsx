@@ -10,7 +10,7 @@ const OurImpact = () => {
                 <h1>Our <span>Impact</span></h1>
                 <small className="d-flex col-12 col-md-8">
                     Cedars Productivity Centre has provided digital literacy training to over 6,000 
-                    young people in Bonny over the last 7 years and helped a few small businesses to
+                    young people in Bonny over the last 8 years and helped a few small businesses to
                     start and grow using technology.
                 </small>
             </div>
@@ -21,13 +21,13 @@ const OurImpact = () => {
                         <h3>
                             <CountUp
                                 start={0}
-                                end={990}
+                                end={1000}
                                 duration={3}
                             />+
                         </h3>
                     </div>
                     <p> 
-                        Young people trained in Web Development (JavaScript, PHP & Python).
+                    Young people trained in Web Development (JavaScript, PHP & Python).
                     </p>
                 </div>
 
@@ -36,13 +36,13 @@ const OurImpact = () => {
                         <h3> 
                             <CountUp
                                 start={0}
-                                end={1000}
+                                end={60}
                                 duration={3}
                             />+
                         </h3>
                     </div>
                     <p> 
-                        Young people trained in Web Development (JavaScript, PHP & Python).
+                    Young people trained in Photography. 
                     </p>
                 </div>
 
@@ -51,13 +51,13 @@ const OurImpact = () => {
                         <h3>
                             <CountUp
                                 start={0}
-                                end={40}
+                                end={3000}
                                 duration={3}
                             />+
                         </h3>
                     </div>
                     <p> 
-                        Young people trained in Web Development (JavaScript, PHP & Python).
+                    Young people trained in Computer Basics.
                     </p>
                 </div>
 
@@ -66,13 +66,13 @@ const OurImpact = () => {
                         <h3>
                             <CountUp
                                 start={0}
-                                end={800}
+                                end={2000}
                                 duration={3}
                             />+
                         </h3>
                     </div>
                     <p> 
-                        Young people trained in Web Development (JavaScript, PHP & Python).
+                    Young people trained in Graphic Design (Corel Draw and Photoshop)..
                     </p>
                 </div>
             </div>

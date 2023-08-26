@@ -8,6 +8,7 @@ import './style.css';
 import SwiperCore, { Autoplay } from 'swiper';
 import { Pagination, Navigation } from 'swiper';
 
+
 const TestimoniesSlide = () => {
     const [testimonyData, updateData] = useState(undefined);
 
@@ -42,6 +43,8 @@ const TestimoniesSlide = () => {
                 // navigation={true}
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
+
+            
             >
 
                 {
@@ -57,8 +60,10 @@ const TestimoniesSlide = () => {
                                 </div>
                                 <div className="col-3 text-center img" 
                                 style={{ 
-                                    background: `url(${data.picture})!important`
+                                    backgroundImage: `url(${data.picture})`
                                  }}>
+                                    {/* <img src={data.picture} alt="lol" /> */}
+                                    
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -90,7 +95,9 @@ export default TestimoniesSlide;
 
 
 const testimoniesData = async () => {
-    const res = await fetch('http://127.0.0.1:8000/api/testimonies/')
+    const res = await fetch('https://cedarsprohub.com/api/testimonies/')
+    
 
     return res.json();
+    
 }

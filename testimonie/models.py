@@ -13,3 +13,14 @@ class Testimony(models.Model):
 
     def __str__(self):
         return str(self.name)
+    
+
+
+class Achievement(models.Model):
+    name = models.CharField(max_length=200, verbose_name="Course")
+    brief = models.TextField()
+    numbers = models.IntegerField()
+    is_published = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name

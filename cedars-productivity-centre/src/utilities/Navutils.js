@@ -11,10 +11,10 @@ export const Navlist = [
         label: 'Programs',
         to: '/programs'
     },
-    {
-        label: 'Activities',
-        to: '/activities'
-    },
+    // {
+    //     label: 'Activities',
+    //     to: '/activities'
+    // },
     {
         label: 'Contact',
         to: '/contact'

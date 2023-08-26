@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import CPW from '../../../images/our-programs-content/dgst.svg';
 import DGST from '../../../images/our-programs-content/cpw.svg';
 import IVO from '../../../images/our-programs-content/ivo.svg';
@@ -17,12 +17,8 @@ const OurPrograms = () => {
                     <div className="header text-start mb-5 col-md-4">
                         <h1>Our <span>Programs</span></h1>
                         <p>
-                            Cedars Productivity Centre was founded in 2015
-                            and has since served thousands of young people.
-                            We operate in Bonny Island and focus on providing
-                            Free digital skills training, As well as provide IT
-                            support for schools, other NGOs, and developing
-                            locally relevant technology solutions for businesses.
+                        We offer a range of programs and services designed to support startups, entrepreneurs, and individuals
+                        in their tech journey.
                         </p>
                     </div>
 
@@ -32,11 +28,12 @@ const OurPrograms = () => {
                             <img src={DGST} className="icon img-fluid" alt="dgst-ico" />
                             <h4>Digital Skills Training and Internet Literacy</h4>
                             <p>
-                                We commit to the highest level of quality in everything
-                                we do, and we continuously improve to exceed expectations.
-                                <Link to="/activities">
+                            Offering classes and workshops in digital literacy, photography, computer repairs as well as the safe and
+                            effective use of the internet.
+
+                                {/* <Link to="/activities">
                                     Read more <img src={arrowWhite} alt="arr-right" />
-                                </Link>
+                                </Link> */}
                             </p>
                         </div>
 
@@ -46,9 +43,9 @@ const OurPrograms = () => {
                             <p>
                                 We hold ourselves to the highest standards of conduct 
                                 and are committed to doing the right thing always.
-                                <Link to="/activities">
+                                {/* <Link to="/activities">
                                     Read more <img src={arrowGreen} alt="arr-right" />
-                                </Link>
+                                </Link> */}
                             </p>
                         </div>
 
@@ -56,11 +53,12 @@ const OurPrograms = () => {
                             <img src={IVO} className="icon img-fluid" alt="ivo-ico" />
                             <h4>Internship/Volunteer Opportunities</h4>
                             <p>
-                                We strive to push boundaries, embrace new ideas, and 
-                                create solutions that make a real impact.
-                                <Link to="/activities">
+                            Providing a platform for technology professionals and enthusiasts to volunteer their skills and time to
+                            help bridge the digital divide.
+
+                                {/* <Link to="/activities">
                                     Read more <img src={arrowGreen} alt="arr-right" />
-                                </Link>
+                                </Link> */}
                             </p>
                         </div>
 
@@ -68,12 +66,10 @@ const OurPrograms = () => {
                             <img src={TAP} className="icon img-fluid" alt="tap-ico" />
                             <h4>Technology Access Program</h4>
                             <p>
-                                By valuing collaboration, we foster a culture of
-                                teamwork and open communication, leading to better
-                                decision-making, problem-solving, and innovation.
-                                <Link to="/activities">
+                            Providing hardware and software donations to underprivileged youths schools, and non-profits.
+                                {/* <Link to="/activities">
                                     Read more <img src={arrowWhite} alt="arr-right" />
-                                </Link>
+                                </Link> */}
                             </p>
                         </div>
 

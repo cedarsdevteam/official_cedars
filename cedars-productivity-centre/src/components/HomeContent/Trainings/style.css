@@ -29,12 +29,26 @@
 }
 
 .training-cont .training-bg {
-    background: url(../../../images/home-content/training-bg.svg);
     height: 250px;
     width: 100%;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+}
+.training-cont:nth-child(1) .training-bg{
+    width: 100%;
+    background: url(../../../images/home-content/teens.png)!important;
+    background-size: cover;
+    background-position:top;
+}
+.training-cont:nth-child(2) .training-bg{
+    background: url(../../../images/home-content/LIfe\ Legacy.png)!important;
+    background-size: cover;
+    background-position:top;
+}
+.training-cont:nth-child(3) .training-bg{
+    background: url(../../../images/home-content/coding\ summer.png)!important;
+    background-size: cover;
+    background-position:top;
 }
 
 .training-cont h6 {

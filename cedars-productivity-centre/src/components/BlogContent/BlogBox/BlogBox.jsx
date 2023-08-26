@@ -20,11 +20,11 @@ const BlogBox = () => {
                             to relevant digital tools and skills required to succeed in
                             the 21st century.
                         </p>
-                        <Link to="/blog"  className="blog-btn">
-                            {/* <Route></Route> */}
+                        {/* <Link to="/blog"  className="blog-btn">
+                            <Route></Route>
                             Read more
                             <img src={ArrowFowardIcon} className="img-fluid" alt="arrow" />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 {/* blog box */}
@@ -38,10 +38,10 @@ const BlogBox = () => {
                             and leaders to understand the unique needs
                             and challenges of each community we serve    
                         </p>
-                        <Link to="/blog" className="blog-btn">
+                        {/* <Link to="/blog" className="blog-btn">
                             Read more
                             <img src={ArrowFowardIcon} className="img-fluid" alt="arrow" />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 {/* blog box */}
@@ -57,10 +57,10 @@ const BlogBox = () => {
                             wisdom of our community to develop innovative solutions that create value.
                             We leverage on divergent and convergent thinking to arrive at sustainable solutions.
                         </p>
-                        <Link to="/blog" className="blog-btn">
+                        {/* <Link to="/blog" className="blog-btn">
                             Read more
                             <img src={ArrowFowardIcon} className="img-fluid" alt="arrow" />
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
                 {/* blog box */}

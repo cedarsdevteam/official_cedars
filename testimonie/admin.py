@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Testimony
+from . models import Testimony, Achievement
 
 class TestimonyAdmin(admin.ModelAdmin):
   list_display = ('name', 'position', 'is_published')
@@ -9,4 +9,6 @@ class TestimonyAdmin(admin.ModelAdmin):
   search_fields = ('name', 'description', 'position')
   list_per_page = 25
 
-admin.site.register(Testimony, TestimonyAdmin)
+admin.site.register(Testimony, TestimonyAdmin),
+admin.site.register(Achievement)
+

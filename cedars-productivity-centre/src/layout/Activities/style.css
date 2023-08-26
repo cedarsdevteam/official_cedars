@@ -88,15 +88,15 @@
 }
 
 #blog-content .blog-box:nth-child(1) .blog-bg{
-    background: url(../../images/blog-content/blog-01.png);
+    background: url(../../images/blog-content/blog01.jpg);
 }
 
 #blog-content .blog-box:nth-child(2) .blog-bg{
-    background: url(../../images/blog-content/blog-02.svg);
+    background: url(../../images/blog-content/blog02.JPG);
 }
 
 #blog-content .blog-box:nth-child(3) .blog-bg{
-    background: url(../../images/blog-content/blog-03.svg);
+    background: url(../../images/blog-content/blog03.jpg);
 }
 
 @media(min-width: 768px) {

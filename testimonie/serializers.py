@@ -1,8 +1,11 @@
 import re
 from rest_framework import serializers
-from .models import Testimony
+from .models import Testimony, Achievement
 
-
+class AchievementSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Achievement
+        fields = ['id','name','brief','numbers']
 
 class TestimonySerializer(serializers.ModelSerializer):
     class Meta:

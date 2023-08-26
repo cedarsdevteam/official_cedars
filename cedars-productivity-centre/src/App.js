@@ -23,10 +23,10 @@ function App() {
         <Route path='/' index element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/programs' element={<Programs />} />
-        <Route path='/activities' element={<Activities />} />
+        {/* <Route path='/activities' element={<Activities />} /> */}
         <Route path='/contact' element={<Contact />} />
         <Route path='/get-involved' element={<GetInvolved />} />
-        <Route path='/blog' element={<SubBlog />} />
+        {/* <Route path='/blog' element={<SubBlog />} /> */}
       </Routes>
 
       {/* Page Loader */}

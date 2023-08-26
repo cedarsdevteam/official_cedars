@@ -40,12 +40,12 @@ const Trainings = () => {
                     <div className="col flex-fluid text-center">
                         <div className="text-center training-bg"></div>
                         <div className="training-content text-center">
-                            <h6 className="mt-3 mb-1">Basic computer bootcamp training</h6>
+                            <h6 className="mt-3 mb-1">Teen's Summer Bootcamp</h6>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium natus.
                                 Voluptas nemo sit Voluptatem, nisi?
                             </p>
-                            <button className="btn register-btn">Register</button>
+                            <button className="btn register-btn">Registration Closed</button>
                         </div> 
                     </div>
                 </SwiperSlide>
@@ -54,12 +54,12 @@ const Trainings = () => {
                     <div className="col flex-fluid text-center">
                         <div className="text-center training-bg"></div>
                         <div className="training-content text-center">
-                            <h6 className="mt-3 mb-1">Basic computer bootcamp training</h6>
+                            <h6 className="mt-3 mb-1">L.i.F.E Legacy Training</h6>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium natus.
                                 Voluptas nemo sit Voluptatem, nisi?
                             </p>
-                            <button className="btn register-btn">Register</button>
+                            <button className="btn register-btn">Registration Closed</button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -68,12 +68,12 @@ const Trainings = () => {
                     <div className="col flex-fluid text-center">
                         <div className="text-center training-bg"></div>
                         <div className="training-content text-center">
-                            <h6 className="mt-3 mb-1">Basic computer bootcamp training</h6>
+                            <h6 className="mt-3 mb-1">Kids Summer of Codes</h6>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, praesentium natus.
                                 Voluptas nemo sit Voluptatem, nisi?
                             </p>
-                            <button className="btn register-btn">Register</button>
+                            <button className="btn register-btn">Registration Closed</button>
                         </div>
                     </div>
                 </SwiperSlide>
