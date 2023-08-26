@@ -11,7 +11,7 @@ SECRET_KEY = "django-insecure-wv6ovdw8-s*^#k&2-o6$os(i0ebi)j8-s9ha=fvdf)5fm-0+z0
 DEBUG = True
 
 ALLOWED_HOSTS = ["*","20.119.8.29","cedarsprohub.com"]
-CSRF_TRUSTED_ORIGINS = ['https://*.cedarsprohub.com', 'https://*.20.119.8.29','http://localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['https://*.cedarsprohub.com', 'https://*.20.119.8.29']
 CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
