@@ -69,19 +69,6 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'cedars-db',
-#         'USER': 'cedarsadmin@cedars-db',
-#         'PASSWORD': '__Ced@rshub',
-#         'HOST': 'cedars-db.postgres.database.azure.com',
-#         'PORT': '5432',
-#         "OPTIONS":{
-#             'sslmode':'require'
-#         }
-#     }
-# }
 
 DATABASES = {
     'default': {
