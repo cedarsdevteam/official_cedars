@@ -11,8 +11,8 @@ SECRET_KEY = "django-insecure-wv6ovdw8-s*^#k&2-o6$os(i0ebi)j8-s9ha=fvdf)5fm-0+z0
 DEBUG = True
 
 ALLOWED_HOSTS = ["*","20.119.8.29","cedarsprohub.com"]
-CSRF_TRUSTED_ORIGINS = ['https://*.cedarsprohub.com', 'https://*.20.119.8.29']
-
+CSRF_TRUSTED_ORIGINS = ['https://*.cedarsprohub.com', 'https://*.20.119.8.29','http://localhost:3000']
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
@@ -30,12 +30,14 @@ INSTALLED_APPS = [
     'rest_framework',
     "whitenoise.runserver_nostatic",
     "drf_spectacular",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -81,26 +83,26 @@ WSGI_APPLICATION = "cedars.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'cedars',
-        'PASSWORD': '___Studios',
-        'HOST': 'cedars.postgres.database.azure.com',
-        'PORT': '5432',
-        "OPTIONS":{
-            'sslmode':'require'
-        }
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase',
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'postgres',
+#         'USER': 'cedars',
+#         'PASSWORD': '___Studios',
+#         'HOST': 'cedars.postgres.database.azure.com',
+#         'PORT': '5432',
+#         "OPTIONS":{
+#             'sslmode':'require'
+#         }
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",

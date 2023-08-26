@@ -23,4 +23,4 @@ class Achievement(models.Model):
     is_published = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.name
+        return str(self.name)

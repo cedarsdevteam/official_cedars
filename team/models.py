@@ -12,4 +12,4 @@ class BoardMember(models.Model):
         verbose_name_plural = "Board Members"
 
     def __str__(self):
-        return self.name
+        return str(self.name)
