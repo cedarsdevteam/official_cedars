@@ -26,8 +26,8 @@ isort==5.10.1
 jsonschema==4.18.4
 jsonschema-specifications==2023.7.1
 lazy-object-proxy==1.7.1
-mccabe==0.7.
-corsheaders
+mccabe==0.7.0
+django-cors-headers==4.2.0
 mypy-extensions==0.4.3
 pathspec==0.10.1
 Pillow==9.2.0
