@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ContactForm from '../../components/Others/ContactForm';
+import ContactForm from '../../components/Others/ContactForm/index';
 import facebook from '../../images/contact_icons/facebook.svg';
 import instagram from '../../images/contact_icons/instagram.svg';
 import linkedin from '../../images/contact_icons/linkedin.svg';

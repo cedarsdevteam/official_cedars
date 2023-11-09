@@ -29,7 +29,7 @@ const TestimoniesSlide = () => {
 
     const fetchTestimoniesData = async () => {
         try {
-            const response = await fetch('https://cedarsprohub.com/api/testimonies/');
+            const response = await fetch('http://127.0.0.1:8000/api/testimonies/');
             const data = await response.json();
             setTestimonyData(data);
             setIsLoading(false);
