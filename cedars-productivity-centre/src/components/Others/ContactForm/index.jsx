@@ -1,68 +1,75 @@
-import React, { useState, useEffect } from 'react';
-import './c-style.css';
+import React, { useState } from "react";
+import "./c-style.css";
 
 // components
-import FormToast from '../Toasts/FormToast';
+import FormToast from "../Toasts/FormToast";
+import usePostRequest from "../../../hooks/usePostRequest";
 
 const ContactForm = (props) => {
+  const CEDARS_URL = "http://cedarsprohub.com/api/contact/";
 
-  // var state = {
-  //   error: null
-  // }
   // Toast state
   const [state, setState] = useState(null);
   const [type, setType] = useState(null);
   const [messages, setMessages] = useState(null);
 
-
   // Form states
-  const [name, setName] = useState('');
-  const [subject, setSubject] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const data = {
+    sender: name,
+    subject: subject,
+    email: email,
+    message: message,
+  };
+  const [response, isLoading, error, postRequest] = usePostRequest(
+    CEDARS_URL,
+    data
+  );
 
   const handleSubmit = (e) => {
-
-    if (name && subject && email && message !== '') {
+    e.preventDefault();
+    if (name && subject && email && message !== "") {
       // Validation shouldn't be to rigid since it's a contact form
-        if(name.length > 5 && subject.length > 4 && email.length > 7 && message.length > 10){
-          const data = {
-            "sender": name,
-            "subject": subject,
-            "email": email,
-            "message": message,
-          }
     
-          // Send Request
-          e.preventDefault()
-          postMessage(data);
-          // toggleStateToast(true, 'Success', 'Message sent successfully')
-          console.log(data);
+        postRequest();
 
-    
-          // return inputs to default state
-          setName('')
-          setSubject('')
-          setEmail('')
-          setMessage('')
+        if (error) {
+          toggleStateToast(true, "Error", error.message);
+          return;
         }
-    } else{
+
+        toggleStateToast(true, "Success", "Message sent successfully");
+
+        // return inputs to default state
+        setName("");
+        setSubject("");
+        setEmail("");
+        setMessage("");
+      }
+     else {
       e.preventDefault();
       // toggle error state/ log error fn
-      toggleStateToast(true, 'Error', 'Invalid input, please try something else')
-      console.error('Invalid input on contact form');
+      toggleStateToast(
+        true,
+        "Error",
+        "Invalid input, please try something else"
+      );
+      console.error("Invalid input on contact form");
     }
-  }
+  };
 
   const toggleStateToast = (state, type, messages) => {
     setState(state);
     setType(type);
     setMessages(messages);
-    
+
     setTimeout(() => {
       setState(null);
     }, 4000);
-  }
+  };
 
   return (
     <div>
@@ -71,53 +78,54 @@ const ContactForm = (props) => {
         <h5>feel free to get in touch with us</h5>
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" className="form-control" name="text" placeholder="Full name"
-          onChange={e => setName(e.target.value)} value={name} />
+        <input
+          type="text"
+          className="form-control"
+          name="text"
+          placeholder="Full name"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+        />
 
-        <input type="email" name="email" className="form-control" placeholder="Email Address"
-          onChange={e => setEmail(e.target.value)} value={email} />
+        <input
+          type="email"
+          name="email"
+          className="form-control"
+          placeholder="Email Address"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+        />
 
-        <input type="text" name="subject" className="form-control" placeholder="Subject"
-          onChange={e => setSubject(e.target.value)} value={subject} />
+        <input
+          type="text"
+          name="subject"
+          className="form-control"
+          placeholder="Subject"
+          onChange={(e) => setSubject(e.target.value)}
+          value={subject}
+        />
 
-        <textarea className="form-control" cols="30" rows="10" name="message" placeholder="Message"
-          onChange={e => setMessage(e.target.value)} value={message}></textarea>
+        <textarea
+          className="form-control"
+          cols="30"
+          rows="10"
+          name="message"
+          placeholder="Message"
+          onChange={(e) => setMessage(e.target.value)}
+          value={message}
+        ></textarea>
 
-        <button className="get-involved-btn btn mt-2" type="submit">Get Involved</button>
+        <button className="get-involved-btn btn mt-2" type="submit">
+          {isLoading ? "Loading..." : "Get Involved"}
+        </button>
       </form>
 
-      <FormToast
-        type={type}
-        state={state}
-        message={messages}
-       />
+      <FormToast type={type} state={state} message={messages} />
     </div>
-  )
-}
+  );
+};
 
 export default ContactForm;
-
-
-const postMessage = async (data) => {
-  const url = 'http://127.0.0.1:8000/api/contact/';
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data)
-    });
-
-    const res = await response.json();
-    // handle response data
-    console.log(res);
-    return res;
-
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 // const validateNames = () => {
 //   const names = document.querySelectorAll('[validate="name"]');
