@@ -1,12 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.69090b6e.css",
-    "main.js": "/static/js/main.c6ad9560.js",
-    "static/media/Harry.svg": "/static/media/Harry.6a7160755293e253ef0a.svg",
-    "static/media/Dienye.svg": "/static/media/Dienye.e4ac29a9f22df3d2fbb7.svg",
+    "main.css": "/static/css/main.b86b6c91.css",
+    "main.js": "/static/js/main.7224c53c.js",
     "static/media/who-we-are-2.jpg": "/static/media/who-we-are-2.d51b071b661e0e5ccf91.jpg",
     "static/media/expect-1.jpg": "/static/media/expect-1.82502354652c9e45e770.jpg",
-    "static/media/Blessed.svg": "/static/media/Blessed.b87a024333bc612702b5.svg",
     "static/media/blog01.jpg": "/static/media/blog01.0dc0e12a9df78ea13ffa.jpg",
     "static/media/expect-3.jpg": "/static/media/expect-3.63c477e1b64b727d4012.jpg",
     "static/media/sub-content.png": "/static/media/sub-content.7860f00901e39bc4b5b0.png",
@@ -19,8 +16,6 @@
     "static/media/board-member-1.svg": "/static/media/board-member-1.40c865c74f56d855cf6b.svg",
     "static/media/LIfe Legacy.png": "/static/media/LIfe Legacy.17c38d00fab356b861ad.png",
     "static/media/board-member-2.svg": "/static/media/board-member-2.fca14f981ad9c9f7f270.svg",
-    "static/media/Jules.svg": "/static/media/Jules.2df9e1b123aa8c568106.svg",
-    "static/media/Sir-T.svg": "/static/media/Sir-T.6a98e6fad150e4e2646e.svg",
     "static/media/home-hero-2.png": "/static/media/home-hero-2.cc4dd1de2556697a5bde.png",
     "static/media/cedars-nl.png": "/static/media/cedars-nl.874a3f894698a13bd100.png",
     "static/media/Nwadike.svg": "/static/media/Nwadike.a1ed5dfea508c2e5ff1b.svg",
@@ -75,11 +70,11 @@
     "static/media/arrow_forward.svg": "/static/media/arrow_forward.0b201ca8c65b21cbf32ed99fddf0ba42.svg",
     "static/media/mail.svg": "/static/media/mail.9e725ff0e46161c7ac4c924399f2d827.svg",
     "static/media/back-to-top.svg": "/static/media/back-to-top.607ff036168a22ef8a4243b9a08150f6.svg",
-    "main.69090b6e.css.map": "/static/css/main.69090b6e.css.map",
-    "main.c6ad9560.js.map": "/static/js/main.c6ad9560.js.map"
+    "main.b86b6c91.css.map": "/static/css/main.b86b6c91.css.map",
+    "main.7224c53c.js.map": "/static/js/main.7224c53c.js.map"
   },
   "entrypoints": [
-    "static/css/main.69090b6e.css",
-    "static/js/main.c6ad9560.js"
+    "static/css/main.b86b6c91.css",
+    "static/js/main.7224c53c.js"
   ]
 }

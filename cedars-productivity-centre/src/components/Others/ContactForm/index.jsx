@@ -1,17 +1,12 @@
-<<<<<<< HEAD
-import React, { useState} from 'react';
-import './c-style.css';
-=======
 import React, { useState } from "react";
 import "./c-style.css";
->>>>>>> fb2f427dc18eb87244c5d420000af2fae7609842
 
 // components
 import FormToast from "../Toasts/FormToast";
 import usePostRequest from "../../../hooks/usePostRequest";
 
 const ContactForm = (props) => {
-  const CEDARS_URL = "http://cedarsprohub.com/api/contact/";
+  const CEDARS_URL = "https://cedarsprohub.com/api/contact/";
 
   // Toast state
   const [state, setState] = useState(null);

@@ -7,12 +7,13 @@ class Contact(models.Model):
     subject = models.CharField(max_length=200)
     email = models.EmailField(blank=False)
     message = RichTextField(blank=False)
+    contact_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name_plural = "Contact Form Response"
 
     def __str__(self):
-        return str(self.sender)
+        return self.sender
 
 
 class NewsLetter(models.Model):

@@ -4,7 +4,7 @@ from .models import Contact, NewsLetter
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
-        fields = '__all__'
+        fields = ['sender','subject','message','email']
         
 
 class NewsLetterSerializer(serializers.ModelSerializer):
