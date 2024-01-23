@@ -22,12 +22,12 @@ const About = () => {
                             OUR STORY 
                         </h1>
                         <p>
-                            Cedars Productivity Centre was founded in 2015
-                            and has since served thousands of young people.
-                            We operate in Bonny Island and focus on providing 
-                            Free digital skills training, As well as provide IT 
-                            support for schools, other NGOs, and developing 
-                            locally relevant technology solutions for businesses.
+                        At Cedars Productivity Centre, we believe in the 
+                        transformative power of digital capabilities and 
+                        the boundless potential of innovation. Established in 2015 
+                        as a not-for-profit organization nestled in the heart of 
+                        Bonny Island, we embark on a noble journey—to be a catalyst 
+                        for Africa's growth and transformation.
                         </p>
                     </div>
 
