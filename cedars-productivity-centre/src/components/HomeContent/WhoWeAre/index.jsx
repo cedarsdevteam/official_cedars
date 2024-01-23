@@ -14,8 +14,7 @@ const WhoWeAre = () => {
 
                         <h1> <span>WHO</span> WE ARE</h1>
                         <p>
-                            Cedars Productivity Centre is a non-profit organization that transforms communities
-                            by building digital capabilities and fostering the development of innovative solutions.
+                          At Cedars Productivity Centre, we are more than just a non-profit organization – we are catalysts for transformative communities. We ignite a digital revolution, arming individuals with the tools to shape their own future and inspire the creation of groundbreaking solutions. Join us on this journey of empowerment and innovation as we redefine what's possible, one community at a time."
                         </p>
                     </div>
                 </div>

@@ -9,9 +9,7 @@ const OurImpact = () => {
             <div className="header flex-fluid pb-2 mb-5">
                 <h1>Our <span>Impact</span></h1>
                 <small className="d-flex col-12 col-md-8">
-                    Cedars Productivity Centre has provided digital literacy training to over 6,000 
-                    young people in Bonny over the last 8 years and helped a few small businesses to
-                    start and grow using technology.
+                From tech novices to digital wizards, we've empowered over 7,000 young people in Bonny. More than just training, we've helped small businesses take flight, fueled by technology and community.
                 </small>
             </div>
 

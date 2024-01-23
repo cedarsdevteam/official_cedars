@@ -27,7 +27,7 @@ const Footer = () => {
                         </ul>
 
                         <h3 className="footer__container__row__copyright">
-                            &copy; 2023 Cedars all rights reserved.
+                            &copy; 2024 Cedars all rights reserved.
                         </h3>
                     </div>
 
