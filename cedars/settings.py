@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'testimonie',
     'contact',
+    'programs',
     'team',
     'ckeditor',
     'rest_framework',

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Contact, NewsLetter
+from .models import Contact, NewsLetter, GetInvolve
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,4 +10,9 @@ class ContactSerializer(serializers.ModelSerializer):
 class NewsLetterSerializer(serializers.ModelSerializer):
     class Meta:
         model = NewsLetter
+        fields = '__all__'
+
+class GetInvolveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GetInvolve
         fields = '__all__'
